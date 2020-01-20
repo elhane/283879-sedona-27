@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Грачева](https://up.htmlacademy.ru/htmlcss/27/user/283879).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко] (https://htmlacademy.ru/profile/tatien)
 
 ---
 
