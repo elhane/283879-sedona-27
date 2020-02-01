@@ -7,7 +7,7 @@
   <body>
     <header>
       <nav>
-        <img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип City of Sedona">
+        <a href="index.html"><img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип City of Sedona"></a>
         <ul>
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и видео</a></li>
@@ -17,42 +17,80 @@
       </nav>
     </header>
 <main>
-  <h3>Инфраструктура:</h3>
-  <!--  <input type="checkbox" name="" id="" checked> -->
-  <ul>
-    <li>Бассейн</li>
-    <li>Парковка</li>
-    <li>Wi-Fi</li>
-  </ul>
+  <form action="https://echo.htmlacademy.ru/courses" method="post" oninput="costoutput.value=hotelcost.value">
+    <fieldset>
+      <legend>Инфраструктура:</legend>
+      <p>
+        <label for="pool">
+          <input type="checkbox" id="pool" name="pool" checked> 
+          Бассейн
+        </label>
+      </p>
+      <p>
+        <label for="parking">
+          <input type="checkbox" id="parking" name="parking"> 
+          Парковка
+        </label>
+      </p>
+      <p>  
+        <label for="wi-fi">
+          <input type="checkbox" id="wi-fi" name="wi-fi"> 
+          Wi-Fi
+        </label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Тип жилья:</legend>
+      <p>
+      <label for="hotel">
+        <input type="checkbox" id="hotel" name="hotel" checked> 
+        Гостиница
+      </label>
+      </p>
+      <p>
+      <label for="motel"> 
+        <input type="checkbox" id="motel" name="motel" checked>
+        Мотель</label>
+      </p>
 
-  <h3>Тип жилья:</h3>
-  <ul>
-    <li>Гостиница</li>
-    <li>Мотель</li>
-    <li>Апартаменты</li>
-  </ul>
+      <p>
+        <label for="apartment">
+          <input type="checkbox" id="apartment" name="apartment" checked> 
+          Апартаменты
+        </label>
+      </p>
+    </fieldset>
 
-  <h3>Стоимость в сутки</h3>
-  <p>от 0</p>
-  <p>до 3000</p>
-  <!-- <input type="range" min="0" max="3000"> -->
-  <button type="button">Показать</button>
+    <label for="hotelcost">Стоимость в сутки (Р):</label>
+      <p>
+        от 0 до  <output for="hotelcost" name="costoutput">3000</output>
+      </p>
+      <p>
+      <input type="range" id="hotelcost" name="hotelcost" min="0" max="3000" step="1">
+      </p>
+    <input type="submit" value="Показать">
+  </form>
+
     <h2>Найдено: 3</h2>
-    <p>Сортировка:</p>
-    <button type="button">По цене</button>
-    <button type="button">По типу</button>
-    <button type="button">По рейтингу</button>
-    <img src="img/icon-up-dir.svg" width="11" height="10" alt="">
-    <img src="img/icon-down-dir.svg" width="11" height="10" alt="">
-    
+    <p>Сортировка:
+      <button type="button">По цене</button>
+      <button type="button">По типу</button>
+      <button type="button">По рейтингу</button>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+        <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+        <path fill="#81b3d2" d="M5.5 10L0 0h11"/>
+      </svg>
+    </p>    
   <section>
-    <h1>Список отелей</h1> <!-- h1 нужно будет потом скрыть? Поставила чтобы далее использовать h2 для заголовков. -->   
+    <h1 class="visually-hidden">Список отелей</h1>    
     <ul>
         <li>
-            <img src="img/Amara-Resort.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <h2>Amara Resort & Spa</h2>
-            <!-- здесь должно быть логичное решение..потом.. :) сделать background-repeat? или спрайт? -->
-                <img src="img/star.svg" width="18" height="17" alt=""> 
+            <img src="img/Amara-Resort.jpg" width="135" height="90" alt="Гостиница"> 
+            <!--Показалось логичным если скринридер будет читать "гостница+название из заголовка -->
+            <a href="#"><h2>Amara Resort & Spa</h2></a>
+                <img src="img/star.svg" width="18" height="17" alt="Рейтинг 5 из 5"> 
                 <img src="img/star.svg" width="18" height="17" alt="">
                 <img src="img/star.svg" width="18" height="17" alt="">
                 <img src="img/star.svg" width="18" height="17" alt="">
@@ -64,9 +102,9 @@
                 <p>Рейтинг: 8,5</p>
         </li>
         <li>
-            <img src="img/Desert-Quail.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <h2>Desert Quail Inn</h2>
-                <img src="img/star.svg" width="18" height="17" alt=""> 
+          <img src="img/Desert-Quail.jpg" width="135" height="90" alt="Мотель">
+          <a href="#"><h2>Desert Quail Inn</h2></a>
+                <img src="img/star.svg" width="18" height="17" alt="Рейтинг 3 из 5"> 
                 <img src="img/star.svg" width="18" height="17" alt="">
                 <img src="img/star.svg" width="18" height="17" alt="">
                 <p>Мотель</p> 
@@ -76,9 +114,9 @@
                 <p>Рейтинг: 8,9<p>
         </li>
         <li>
-            <img src="img/Villas-at-Poco.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <h2>Villas at Poco Diablo</h2>
-                <img src="img/star.svg" width="18" height="17" alt=""> 
+           <img src="img/Villas-at-Poco.jpg" width="135" height="90" alt="Апартаменты">
+            <a href="#"><h2>Villas at Poco Diablo</h2></a>
+                <img src="img/star.svg" width="18" height="17" alt="Рейтинг 2 из 5"> 
                 <img src="img/star.svg" width="18" height="17" alt="">
                 <p>Апартаменты</p> 
                 <p>от 2000 Р.</p>
@@ -91,16 +129,16 @@
 
 </main>
 <footer>
-  <p>#VISITSEDONA<br>
+  <p>#VISITSEDONA <br>
   ТЕЛ: +7(495) 666-02-66
   </p>
-    <ul>
-      <li><a href="#">Твиттер</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">YouTube</a></li>
-    </ul>
-  <p>WEBSITE BY</p> 
-  <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">
+  <ul>
+    <li><a href="#"><img src="img/tw-icon.svg" width="17" height="15" alt="">Твиттер</a></li>
+    <li><a href="#"><img src="img/fb-icon.svg" width="12" height="22" alt="">Фейсбук</a></li>
+    <li><a href="#"><img src="img/youtube.svg" width="20" height="16" alt="">YouTube</a></li>
+  </ul>
+  <p>WEBSITE BY</p>
+  <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
 </footer>
 </body>
 </html>
