@@ -70,23 +70,27 @@
 
     <button type="button">Поиск гостиницы в Седоне</button>
    <form action="https://echo.htmlacademy.ru/courses" method="post"> 
-    <!-- можно пока оставить https://echo.htmlacademy.ru/courses ? Удобно, что можно проверить работу формы :)-->
     <p>
       <label for="date-check-in">Дата заезда: </label>
         <input type="date" id="date-check-in" name="date-check-in"> 
-        <!--может это все-таки type="text" и placeholder="24 апреля 2017"? на макете выглядит как текст-->
+       
     </p> 
     <p>
       <label for="date-check-out">Дата выезда: </label>
         <input type="date" id="date-check-out" name="date-check-out">
     </p>
     <p>
+
       <label for="adults">Взрослые</label>
+        <button type="button"  value="-">-</button>
         <input type="number" id="adults" name="adults" value="1">
+        <button type="button"  value="+">+</button>
       <label for="children">Дети</label>
+      <button type="button"  value="-">-</button>
         <input type="number" id="children" name="children" value="0">
+      <button type="button"  value="+">+</button>
     </p>
-    <input type="submit" value="Показать">
+    <button type="submit" value="Показать">Показать</button>
    </form>
 
   <img src="img/map.png" width="1200" height="593" alt="Седона на карте">
