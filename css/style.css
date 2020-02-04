@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+}
+
+.main-navigation {
+    color: black;
+    font-weight: bold;
+}
+
+.main-navigation ul {
+    list-style: none;
+}
+
+.main-navigation li {
+    display: inline-block;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro {
+    background-color: #d9eaf2;
+    background-image: url("/img/intro-background.jpg");
+    width: 1200px;
+    height: 773px; 
+    position: relative;
+}
+
+.features-list h2,
+.features-title {
+    font-size: 21px;
+    font-weight: bold;
+}
