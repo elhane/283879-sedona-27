@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-
-    font-family: "PT Sans", Arial, sans-serif;
+    max-width: 1200px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
@@ -21,9 +21,6 @@ body {
     text-align: center;
     margin-top: -60px; 
 }
-
-/* отсупы конечно же пока не верные, просто хотелось хотя бы 
-минимального соответствия :)) */
 
 .main-navigation li {
     display: inline-block;
@@ -45,9 +42,30 @@ a {
 если указать абсолютный путь */
 .intro {
     background-color: #d9eaf2;
-    background-image: url("img/intro-background.jpg");
+    background-image: url("../img/intro-background.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center top;
     height: 557px; 
     text-align: center;
+}
+
+/* пока не додумалась :)) 
+.intro img {
+    display: block;
+    width: 458px;
+    height: 352px;
+}
+*/
+
+.intro::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 730px;
+    background-image: url("../img/polygon.png");
+    background-repeat: no-repeat;
 }
 
 .section {
@@ -56,11 +74,63 @@ a {
 
 .hotel-search {
     line-height: 24px;  
+  
 }
 
 .hotel-search-titile {
     font-size: 30px;
     line-height: 36px;  
+}
+
+.hotel-search-button-brown {
+    min-height: 86px;
+    background-color: #766357;
+    padding: 0 139px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 21px;
+}
+
+.hotel-search-button-blue {
+    min-height: 58px;
+    background-color: #81b3d2;
+    padding: 0 197px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 21px;
+  
+}
+
+.filter-search {
+    background-image: url("../img/filter-background.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.filter-search legend,
+.filter-search label {
+    font-weight: bold;
+}
+
+.filter-search fieldset {
+    border: none;
+}
+
+.filter-search button {
+    min-height: 32px;
+    border: solid 2px #ffffff;
+    border-radius: 2px;
+    background: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 11px 34px;
 }
 
 .features-list {
@@ -78,7 +148,6 @@ a {
     color: #ffffff;
     background-color: #81b3d2;
     height: 256px;
-    vertical-align: middle;
 }
 
 .feature-row-gray {
@@ -91,6 +160,10 @@ a {
     width: 400px;
     height: 256px;
 }
+.feature-item {
+    width: 300px;
+    margin: 0 auto;
+}
 
 .hotel-search {
     text-align: center;
@@ -102,7 +175,7 @@ a {
     line-height: 36px;
 }
 
-.form-hotel-search {
+.hotel-search-form {
     font-weight: bold; 
     text-align: center; 
 }
@@ -114,7 +187,7 @@ input[type="number"],
     font-weight: bold;
     color: #000000;
     text-transform: uppercase;
-   }
+}
 
 .socials {
     display: inline-block;
@@ -131,7 +204,8 @@ input[type="number"],
     margin-right: 2px;
 }
 
-.hasgtag {
+.hashtag, 
+.phone-number {
     font-weight: bold;
 }
 
@@ -145,22 +219,20 @@ input[type="number"],
 }
 
 .hotel-button-blue {
-    width: 110px;
-    height: 27px;
+    min-height: 27px;
     color: #ffffff;
     background-color: #81b3d2;
     margin-top: 14px;
     margin-right: 6px;
-    padding: 5px 16px;
+    padding: 6px 17px;
     font-weight: 700;
 }
 .hotel-button-brown {
-    width: 142px;
-    height: 27px;
+    min-height: 27px;
     color: #ffffff;
     background-color: #766357;
     margin-top: 14px;
-    padding: 5px 16px;
+    padding: 6px 16px;
     font-weight: 700;
 }
 
@@ -185,6 +257,9 @@ input[type="number"],
     text-decoration-color: #81b3d2;
 }
 
+
+/* -------- СОСТОЯНИЯ ПО СТАЙЛГАЙДУ ----------*/ 
+
 .main-navigation a:hover {
     color: #81b3d2;
 }
@@ -192,12 +267,12 @@ input[type="number"],
     color: rgba(0, 0, 0, 0.3);
 }
 
-.hotels-list a:hover {
+.hotel-list-item:hover {
     color: #81b3d2;
 }
 
-.hotels-list a:active {
-    color: rgba(0, 0, 0, 0.3);
+.hotel-list-item:active {
+    color: rgba(0, 0, 0, 0.3);;
 }
 
 .sorting button:hover {
@@ -217,32 +292,51 @@ input[type="number"],
     text-decoration: none; 
 }
 
+.arrow:hover path {
+    fill: #000000;
+}
+
+.arrow:active path {
+    fill: #81b3d2;
+}
+.arrow-active path {
+    fill: #81b3d2;
+}
+
 .selected-page {
     color: #766357;
 }
-
-.hotel-button-blue a:active {
+/* внешний вид меняется только если написать тег по классу... */
+a.hotel-button-blue:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
 
-.hotel-button-brown a:active {
+a.hotel-button-brown:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
 }
 
-/* для следующих двух :hover надо как-то иначе написать, 
-они не работают из-за написанного ранее в коде  
-.hotels-list a:hover { color: #81b3d2; } Кнопки подробнее и 
-забронировать еще обернуть и задать класс другой?*/
-
-.hotel-button-blue a:hover {
+/* а вот hover работает нормально и по классам... хм */
+.hotel-button-blue:hover {
     background-color: #669ec0;
     color: #ffffff;
 }
-.hotel-button-brown a:hover {
+.hotel-button-brown:hover {
     background-color: #604e43;
     color: #ffffff;
+}
+
+.filter-search button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+.copyright:hover path {
+    fill: #81b3d2;
+}
+
+.copyright:active path {
+    fill: #bdbbbc;
 }
 
 .visually-hidden {
@@ -252,6 +346,3 @@ input[type="number"],
     height: 1px;
     margin: -1px;
   }
-  
-
- 
