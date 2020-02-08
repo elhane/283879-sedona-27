@@ -330,24 +330,23 @@ input[type="number"],
     padding: 0;
 }
 
-.hotels h2 {
-    font-size: 24px;
-    line-height: 26px;
-}
-
 .hotel-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  padding-left: 50px;
-  padding-top: 30px;
+
   padding-right: 30px;
-  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
 }
 
+.hotel-item:nth-child(3) {
+    border-bottom: 2px solid #e5e5e5;
+  }
+
 .hotel-description {
-    display: flex;
+    width: 800px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .hotel-type, 
@@ -355,10 +354,8 @@ input[type="number"],
   float: left;
 }
 
-.hotel-list-title {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
+.hotel-image {
+    margin-right: 30px;
 }
 
 .hotel-list-title:hover {
@@ -411,6 +408,15 @@ input[type="number"],
 
 .sorting {
     font-size: 12px;
+    margin-left: 70px;
+}
+/*
+.sorting-value {
+  display: inline-block;
+}
+*/
+.sorting h2 {
+    margin-right: 50px;
 }
 
 .sorting button {
