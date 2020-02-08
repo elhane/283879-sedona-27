@@ -1,36 +1,63 @@
 body {
     margin: 0;
     padding: 0;
-    max-width: 1200px;
+   
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 400;
     color: #000000;
     text-transform: uppercase;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  }
+
+.main-header {
+    height: 56px;
+
+    outline: 1px solid #850091;
 }
 
 .main-navigation {
     color: #000000;
     font-weight: bold;
     line-height: 26px; 
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
 }
 
 .main-navigation ul {
+    padding: 0;
     list-style: none;
     text-align: center;
-    margin-top: -60px; 
+    margin-top: 0px;
+
+    display: flex;
+    justify-content: space-around;
+
+    outline: 1px solid #00914d;
 }
 
-.main-navigation li {
-    display: inline-block;
-    width: 239px;
-    padding-left: 20px;
-    padding-right: 20px;
+.site-navigation li {
+    height: 56px;
+
+    outline: 1px solid #e1e433;
 }
 
-.logo {
-    text-align: center;
+.site-navigation li:not(:nth-child(3)) {
+    margin-top: 15px;
 }
 
 a {
@@ -38,34 +65,114 @@ a {
     color: #000000;
 }
 
-/* ерунда какая-то с этой картинкой, отображается только 
-если указать абсолютный путь */
 .intro {
     background-color: #d9eaf2;
     background-image: url("../img/intro-background.jpg"); 
     background-repeat: no-repeat;
-    background-position: center top;
     height: 557px; 
-    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
 }
-
-/* пока не додумалась :)) 
-.intro img {
-    display: block;
-    width: 458px;
-    height: 352px;
-}
-*/
 
 .intro::after {
     content: "";
     position: absolute;
     bottom: 0;
+   
     display: block;
     width: 100%;
-    height: 730px;
+   
     background-image: url("../img/polygon.png");
     background-repeat: no-repeat;
+}
+
+.main-navigation a:hover {
+    color: #81b3d2;
+}
+.main-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.selected-page {
+    color: #766357;
+}
+
+.main-footer {
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacts {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-socials li {
+    margin-right: 2px;
+}
+
+.social-button {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.social-youtube svg {
+   margin-top: 16px;
+}
+
+.social-facebook svg {
+   margin-top: 13px;
+}
+.social-twitter svg {
+   margin-top: 16px;
+}
+
+.social-button:hover {
+  background-color: #669ec0;;
+}
+
+.social-button:active {
+  background-color: #5496bd;
+}
+.social-button:active path {
+  opacity: 0.3;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright-text {
+    padding-top: 3px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+
+.copyright:hover path {
+    fill: #81b3d2;
+}
+
+.copyright:active path {
+    fill: #bdbbbc;
 }
 
 .section {
@@ -74,7 +181,6 @@ a {
 
 .hotel-search {
     line-height: 24px;  
-  
 }
 
 .hotel-search-titile {
@@ -102,7 +208,6 @@ a {
     font-weight: bold;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
-  
 }
 
 .filter-search {
@@ -133,8 +238,23 @@ a {
     padding: 11px 34px;
 }
 
+.filter-search button:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.feature-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
 .features-list {
     text-align: center;
+}
+
+.features-list p {
+    line-height: 21px;
 }
 
 .features-list h2,
@@ -144,26 +264,41 @@ a {
     font-weight: bold;
 }
 
+.feature-row-icons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 56px;
+    padding-bottom: 70px;
+}
+
 .feature-row-image {
     color: #ffffff;
     background-color: #81b3d2;
     height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .feature-row-gray {
+    height: 256px;
     background-color: #eeeeee;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .feature-item {
-    text-align: center;
-    display: inline-block;
-    width: 400px;
-    height: 256px;
-}
-.feature-item {
-    width: 300px;
     margin: 0 auto;
+    vertical-align: middle;
+    width: 300px;
+    box-sizing: border-box;
 }
+
+
 
 .hotel-search {
     text-align: center;
@@ -182,40 +317,56 @@ a {
 
 input[type="number"],
 ::placeholder { 
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: #000000;
     text-transform: uppercase;
 }
 
-.socials {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.social-button {
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    background: #81b3d2;
-    width: 46px;
-    height: 48px;
-    margin-right: 2px;
-}
-
-.hashtag, 
-.phone-number {
-    font-weight: bold;
-}
-
 .hotels-list ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.hotels-list h2 {
+.hotels h2 {
     font-size: 24px;
     line-height: 26px;
+}
+
+.hotel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 30px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.hotel-description {
+    display: flex;
+}
+
+.hotel-type, 
+.hotel-price {
+  float: left;
+}
+
+.hotel-list-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.hotel-list-title:hover {
+    color: #81b3d2;
+}
+
+.hotel-list-title:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .hotel-button-blue {
@@ -227,6 +378,7 @@ input[type="number"],
     padding: 6px 17px;
     font-weight: 700;
 }
+
 .hotel-button-brown {
     min-height: 27px;
     color: #ffffff;
@@ -234,6 +386,19 @@ input[type="number"],
     margin-top: 14px;
     padding: 6px 16px;
     font-weight: 700;
+}
+
+.hotel-button-blue:hover {
+    background-color: #669ec0;
+    color: #ffffff;
+}
+.hotel-button-brown:hover {
+    background-color: #604e43;
+    color: #ffffff;
+}
+.hotel-button-brown:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #503e33;
 }
 
 .raiting-numbers {
@@ -255,24 +420,6 @@ input[type="number"],
     text-decoration: underline;
     text-decoration-style: dotted; 
     text-decoration-color: #81b3d2;
-}
-
-
-/* -------- СОСТОЯНИЯ ПО СТАЙЛГАЙДУ ----------*/ 
-
-.main-navigation a:hover {
-    color: #81b3d2;
-}
-.main-navigation a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.hotel-list-item:hover {
-    color: #81b3d2;
-}
-
-.hotel-list-item:active {
-    color: rgba(0, 0, 0, 0.3);;
 }
 
 .sorting button:hover {
@@ -303,42 +450,6 @@ input[type="number"],
     fill: #81b3d2;
 }
 
-.selected-page {
-    color: #766357;
-}
-/* внешний вид меняется только если написать тег по классу... */
-a.hotel-button-blue:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #5496bd;
-}
-
-a.hotel-button-brown:active {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #503e33;
-}
-
-/* а вот hover работает нормально и по классам... хм */
-.hotel-button-blue:hover {
-    background-color: #669ec0;
-    color: #ffffff;
-}
-.hotel-button-brown:hover {
-    background-color: #604e43;
-    color: #ffffff;
-}
-
-.filter-search button:hover {
-    color: #000000;
-    background-color: #ffffff;
-}
-.copyright:hover path {
-    fill: #81b3d2;
-}
-
-.copyright:active path {
-    fill: #bdbbbc;
-}
-
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -346,3 +457,4 @@ a.hotel-button-brown:active {
     height: 1px;
     margin: -1px;
   }
+
