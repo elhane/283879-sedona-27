@@ -31,47 +31,49 @@
   <form action="https://echo.htmlacademy.ru/courses" method="post" oninput="costoutput.value=hotelcost.value">
     <fieldset>
       <legend>Инфраструктура:</legend>
-      <p>
-        <label for="pool">
-          <input type="checkbox" id="pool" name="pool" checked> 
+     
+        <label class="check option" for="pool">
+          <input class="check-input" type="checkbox" id="pool" name="pool" checked> 
+          <span class="check-box"></span>
           Бассейн
         </label>
-      </p>
-      <p>
-        <label for="parking">
-          <input type="checkbox" id="parking" name="parking"> 
+      
+      
+        <label class="check option" for="parking">
+          <input class="check-input" type="checkbox" id="parking" name="parking"> 
+          <span class="check-box"></span>
           Парковка
         </label>
-      </p>
-      <p>  
-        <label for="wi-fi">
-          <input type="checkbox" id="wi-fi" name="wi-fi"> 
+ 
+        <label class="check option" for="wi-fi">
+          <input class="check-input" type="checkbox" id="wi-fi" name="wi-fi"> 
+          <span class="check-box"></span>
           Wi-Fi
         </label>
-      </p>
+      
     </fieldset>
     
     <fieldset>
       <legend>Тип жилья:</legend>
-      <p>
-      <label for="hotel">
-        <input type="checkbox" id="hotel" name="hotel" checked> 
+      
+      <label class="check option" for="hotel">
+        <input class="check-input" type="checkbox" id="hotel" name="hotel" checked> 
+        <span class="check-box"></span>
         Гостиница
       </label>
-      </p>
-      <p>
-      <label for="motel"> 
-        <input type="checkbox" id="motel" name="motel" checked>
+      
+      <label class="check option"  for="motel"> 
+        <input class="check-input" type="checkbox" id="motel" name="motel" checked>
+        <span class="check-box"></span>
         Мотель</label>
-      </p>
-      <p>
-        <label for="apartment">
-          <input type="checkbox" id="apartment" name="apartment" checked> 
+    
+        <label class="check option" for="apartment">
+          <input class="check-input" type="checkbox" id="apartment" name="apartment" checked>
+          <span class="check-box"></span> 
           Апартаменты
         </label>
-      </p>
-    </fieldset>
-  </form>
+      </fieldset>
+ 
 
   <div class="filter-range">
     <div class="filter-range-title">Стоимость в сутки (Р):</div>
@@ -90,6 +92,8 @@
 
   </div>
 </div>
+</form>
+
 </div>
 
 <div class="sorting">
@@ -139,15 +143,9 @@
             </div>
                 
           <div class="hotel-rating">
-            <div class="raiting-four-stars">
-              <!-- 
-              <img src="img/star.svg" width="18" height="17" alt="Рейтинг 5 из 5"> 
-              <img src="img/star.svg" width="18" height="17" alt="">
-              <img src="img/star.svg" width="18" height="17" alt="">
-              <img src="img/star.svg" width="18" height="17" alt="">
-              <img src="img/star.svg" width="18" height="17" alt=""> -->
-            </div>
-            <span class="raiting-numbers">Рейтинг: 8,5</span>
+            <div class="rating-four-stars">
+                          </div>
+            <span class="rating-numbers">Рейтинг: 8,5</span>
           </div>
         </li>
 
@@ -170,13 +168,10 @@
         </div>
 
           <div class="hotel-rating">
-            <div class="raiting-three-stars">
-              <!-- 
-               <img src="img/star.svg" width="18" height="17" alt="Рейтинг 3 из 5"> 
-              <img src="img/star.svg" width="18" height="17" alt="">
-              <img src="img/star.svg" width="18" height="17" alt=""> -->
+            <div class="rating-three-stars">
+           
             </div>
-            <span class="raiting-numbers">Рейтинг: 8,9</span>
+            <span class="rating-numbers">Рейтинг: 8,9</span>
           </div> 
         </li>
 
@@ -200,12 +195,10 @@
           </div>
                 
             <div class="hotel-rating">
-              <div class="raiting-two-stars">
-                <!-- 
-                <img src="img/star.svg" width="18" height="17" alt="Рейтинг 2 из 5"> 
-                <img src="img/star.svg" width="18" height="17" alt=""> -->
+              <div class="rating-two-stars">
+               
               </div>
-              <span class="raiting-numbers">Рейтинг: 9,2</span>
+              <span class="rating-numbers">Рейтинг: 9,2</span>
             </div>      
         </li>
     </ul>
@@ -214,28 +207,35 @@
 
 </main>
 <footer class="footer-inner">
+
   <div class="contacts">
-    <a class="hashtag" href="#" >#VISITSEDONA</a><br>
+    <a class="hashtag" href="#" >#VISITSEDONA</a>
     <a class="phone-number" href="tel:+74956660266" aria-label="Номер телефона +7(495)-666-02-66">ТЕЛ: +7(495) 666-02-66</a>
   </div>
 
+
   <div class="footer-socials">
-    <div class="footer-socials-list">
-      <a class="social-button social-twitter" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
+    <ul>
+      <li>
+        <a class="social-button" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
+        </a>
+      </li>
+    <li>
+      <a class="social-button" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
       </a>
-
-      <a class="social-button social-facebook" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
-      </a>
-
-      <a class="social-button social-youtube" href="#">
+    </li>
+      <li>
+        <a class="social-button" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
           <image width="20" height="16" overflow="visible"/>
           <path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
-      </a>
-    </div>
+        </a>
+      </li>
+    </ul>
   </div>
+
 
   <div class="copyright"> 
     <span class="copyright-text">website by</span>
