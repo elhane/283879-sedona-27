@@ -29,7 +29,7 @@ link.addEventListener("click", function (evt) {
     checkin.focus();
 });
 
-fotm.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function (evt) {
     if (!checkin.value || !checkout.value) {
         evt.preventDefault();
         popup.classList.remove("modal-error");
