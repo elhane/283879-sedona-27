@@ -263,10 +263,13 @@ a {
 
 .feature-row-icons {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    padding-top: 162px;
+    flex-wrap: wrap;
+    padding-top: 62px;
     padding-bottom: 7px;
+}
+.feature-row-icons .feature-item {
+    padding-top: 100px;
+
 }
 
 .feature-row-image {
@@ -417,7 +420,6 @@ a {
 .hotel-search {
     line-height: 24px;  
     padding-top: 26px;
-    position: relative;
 }
 
 .hotel-search-title {
@@ -427,7 +429,6 @@ a {
 }
 
 .hotel-search p {
-    padding-bottom: 32px;
     text-align: center;
     color: #333333;
 }
@@ -455,11 +456,20 @@ a {
     display: none;
 }
 .form-container {
-    z-index: 1;
+    position: relative;
+    padding-top: 118px; 
+    /* или margin-top: 118px; ?? */
 }
 
 .form-show {
     display: flex;
+    animation: slide-down;    
+    animation-duration: 1s; 
+    animation-timing-function: ease-out;     
+}
+
+.form-hide {
+    display: none;
     animation: slide-down;    
     animation-duration: 1s; 
     animation-timing-function: ease-out;     
@@ -600,7 +610,7 @@ label[for="children"] {
     height: 3px;
     background-color: #a9a9a9;
 
-    top: 45%;
+    top: 44%;
     left: 38%;
 }
 .btn-plus::after {
@@ -655,7 +665,11 @@ label[for="children"] {
 
     display: block;
     margin: 0 auto;
-    z-index: 10;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    position: absolute;
 }
 
 .hotel-search-button-blue {
