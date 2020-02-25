@@ -287,6 +287,9 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding-top: 62px;
     padding-bottom: 7px;
 }
@@ -764,7 +767,6 @@ label[for="children"] {
     outline: 2px solid #e5e5e5;
 }
 
-
 .filter-search {
     background-image: url("../img/filter-background.jpg");
     background-color: #669ec0;
@@ -818,6 +820,7 @@ label[for="children"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    opacity: 0;
 }
 
 .check-box {
@@ -850,9 +853,9 @@ label[for="children"] {
     height: 23px;
 }
 
-//выделяет, но тогда не отмечается при нажатии пробела
-.check-box:focus {
-    outline: -webkit-focus-ring-color auto 5px;
+.check-input:focus + .check-box {
+    outline: 2px dotted rgba(255, 254, 254, 0.5);
+    outline-offset: 3px;
 }
 
 .filter-range {
