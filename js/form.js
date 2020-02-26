@@ -18,7 +18,7 @@ try {
 }
 
 link.addEventListener("click", function(evt) {
-  evt.preventDefault();
+  event.preventDefault();
   form.classList.remove("form-error");
   form.classList.toggle("form-hide");
 });
