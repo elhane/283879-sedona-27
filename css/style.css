@@ -525,21 +525,17 @@ a {
     background-color: #ffffff;    
     -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);    
             box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-}
-
-.form-container {
-    position: relative;
-    margin-top: 131px; 
-}
-
-/* POPUP */
-.form-show {
-    -webkit-animation: slide-down;
+            -webkit-animation: slide-down;
             animation: slide-down;    
     -webkit-animation-duration: 0.7s;    
             animation-duration: 0.7s; 
     -webkit-animation-timing-function: linear; 
             animation-timing-function: linear;     
+}
+
+.form-container {
+    position: relative;
+    margin-top: 131px; 
 }
 
 .form-hide {
@@ -918,7 +914,6 @@ label[for="children"] {
     width: 50px;
     margin: 0;
     color: inherit;
-    font: inherit;
     background: none;
     border: none;
     -moz-appearance: textfield;
